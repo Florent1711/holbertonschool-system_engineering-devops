@@ -1,0 +1,27 @@
+Qu'est-ce qu'un serveur ?
+Hardware : réseau d'ordinateurs reliés par une machine physique et sur lequel fonctionnent un ou plusieurs serveur logiciels (software).
+Une alternative au terme de serveur (hardware) est «hebergeur» (host en anglais). En principe, chaque ordinateur est utilisé avec un serveur logiciel.
+Software : un logiciel serveur est un programme effectuant des interactions en réseau avec d’autres programmes appelés logiciels clients. Le service
+apporté dépend du type de logiciel serveur. La base de la communication en réseau est cette relation Client-serveur. Lors de l’échange de données, différents protocoles de transmission entrent en jeu.
+Source : https://www.ionos.fr/digitalguide/serveur/know-how/quest-ce-quun-serveur-une-notion-deux-definitions/
+
+Nginx est un logiciel libre de serveur web, système asynchrone russe au départ, racheté par F5 Networks en 2019 (n'étant plus russe, on peut donc l'utiliser)
+Source : https://fr.wikipedia.org/wiki/NGINX
+
+Un nom de domaine est une adresse que les internautes saisissent dans un navigateutr pour acceder à n'importe quel type de site internet. Plus pratique que de saisir l'adresse IP.
+
+un DNS peut être vu comme une base de données répartie, contenant des enregistrements de ressources, appelés Resource Records (ou RR), codés sur 16bits, concernant les noms de domaine et codifiant les types d’enregistrements suivants :
+    A : il s’agit des enregistrements d’adresses faisant correspondre un nom d’hôte à une adresse IPv4 de 32bits. En IPv6, on utilise des enregistrements AAAA codés sur 128bits.
+    CNAME : il s’agit d’enregistrements canoniques créant un alias d’un domaine vers un autre. L’alias hérite de tous les sous-domaines de l’original.
+    MX : définit les serveurs de messagerie pour le domaine.
+    PTR : associe une adresse IP à un enregistrement de nom de domaine (on parle de reverse puisqu’il s’agit du contraire de l’enregistrement A).
+    NS : définit les serveurs DNS du domaine (primaire et secondaire).
+    SOA : fournit les informations générales de la zone : serveur principal, contact, délai d’expiration, n° de série de la zone.
+    SRV : généralise la notion d’enregistrement MX en proposant des fonctions avancées : taux de répartition de charge (décrit dans la RFC2782).
+    NAPTR : donne accès aux règles de réécriture de l’information permettant de lier  le nom de domaine et une ressource (RFC3403).
+    TXT : permet à l’administrateur d’insérer un texte quelconque pour un enregistrement DNS.
+
+Le rôle du web server est de distribuer le contenu du site web. Il peut être statique (pile) quand il envooie les fichiers hebergés "tels quels" ou dynamique (serveur d'applications/bases de données)
+Source : https://developer.mozilla.org/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server
+
+Les bases de données permettent de stocker et de manipuler les données.
