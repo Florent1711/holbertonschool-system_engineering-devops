@@ -1,0 +1,40 @@
+Ajout de 2 serveurs pour parer à une panne du serveur principal (spof) et pour
+éventuellement avoir un DNS secondaire.
+
+Le serveur d'applications est un logiciel d'infrastructure offrant un contexte
+d'exécution pour des composants applicatifs.
+Le terme est apparu dans le domaine des applications web.
+Au sens strict les composants hébergés par le serveur d'applications
+ne sont pas de simples procédures ou scripts mais de réels composants logiciels
+conformes à un modèle de composants (EJB, COM, Fractal, etc.).
+Source : https://fr.wikipedia.org/wiki/Serveur_d%27applications
+
+Load-balancer (HAproxy) : Un serveur Haproxy a pour fonction
+première le Load-Balancing (répartition des charges) entre
+plusieurs serveurs web. Ainsi, en ne joignant qu’une seule
+IP (celle du serveur Haproxy) nous tomberont sur des serveurs web différents
+mais à contenu identique. Le but est donc de répartir les
+charges d’un seul serveur web sur deux ou plusieurs autres
+de façon transparente pour l’utilisateur.
+Source : https://www.it-connect.fr/mise-en-place-dun-serveur-haproxy/
+
+Un pare-feu (de l'anglais firewall3) est un logiciel
+et/ou matériel permettant de faire respecter la politique
+de sécurité de réseaux, celle-ci définissant quels sont les 
+types de communications autorisés sur un réseau informatique.
+Il surveille et contrôle les applications et les flux de données (paquets).
+Source : https://fr.wikipedia.org/wiki/Pare-feu_(informatique)
+
+L'équilibrage de charge permet le choix entre une configuration actif-actif
+ou actif-passif.
+    -Les avantages d’un cluster actif-actif sont les suivants :
+    -Haute disponibilité des applications critiques à l’échelle des datacenters, des campus et des régions.
+    -Équilibrage de charge dans un cluster de serveurs.
+    -Redondance et résilience des données (disponibilité maintenue même en cas de panne d’un site).
+    -En période d’opération normale, les ressources de tous vos serveurs sont disponibles.
+Cluster Actif-Passif:
+    -Dans un cluster actif-passif, les machines clientes se connectent au serveur principal, qui gère toute la charge de travail. Pendant ce temps, un serveur de sauvegarde reste en veille et ne s’active qu’en cas de panne du serveur principal.
+    -La principale différence entre ces deux architectures réside dans la performance :
+    -Dans un cluster actif-passif, le serveur de sauvegarde ne voit les actions que pendant le basculement.
+    -En revanche, les clusters actif-actif vous donnent accès aux ressources de tous vos serveurs en permanence.
+    Exemple : Si le serveur principal échoue, le serveur de sauvegarde prend le relais pour assurer la continuité du service.
