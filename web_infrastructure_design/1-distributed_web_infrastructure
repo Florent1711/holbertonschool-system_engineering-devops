@@ -38,3 +38,9 @@ Cluster Actif-Passif:
     -Dans un cluster actif-passif, le serveur de sauvegarde ne voit les actions que pendant le basculement.
     -En revanche, les clusters actif-actif vous donnent accès aux ressources de tous vos serveurs en permanence.
     Exemple : Si le serveur principal échoue, le serveur de sauvegarde prend le relais pour assurer la continuité du service.
+
+Fonctionnement d'un cluster primaire-réplique (maître-esclave) de base de données
+si un serveur dit "Master" tombe, un autre serveur "Slave" 
+doit prendre le relais de manière immédiate et doit aussi 
+avoir la dernière version des informations
+Source : https://www.it-connect.fr/replication-en-temps-reel-masterslave-mysql%ef%bb%bf/
