@@ -1,0 +1,14 @@
+Le SSL (secure Socket Layer) est un protocole de sécurité internet 
+basé sur le chiffrement. Il a été développé pour la première fois par Netscape en 1995 dans le but de garantir la confidentialité, l'authentification et l'intégrité des données dans les communications Internet. Le SSL est le prédécesseur du chiffrement moderne TLS utilisé aujourd'hui.
+Un site web qui met en œuvre le protocole SSL/TLS comporte un «HTTPS » dans son URL au lieu d'un « HTTP ».
+
+Le monitoring, ou supervision d'une application, est la capacité à avoir une vue globale sur une application à un instant T mais aussi un historique des états passés pour plusieurs éléments :
+performance, temps de réponse des ressources, intégrité des fonctionnalités.
+
+QPS : Queries per second (anglais : « requêtes par seconde »), abrégé en QPS, est un terme informatique 1correspondant au nombre de requêtes qu'un serveur informatique accepte de traiter par seconde.
+
+Pourquoi la terminaison de SSL au niveau de l'équilibreur de charge pose-t-elle problème ?
+Équilibrage de charge et SSL /TLS Déchargement
+Si les considérations de sécurité le permettent, il est possible d'utiliser un ADC d'équilibrage de charge pour décharger SSL des serveurs principaux, libérant ainsi des ressources informatiques. Dans cette situation, un SSL /TLS certificat est installé sur l'ACD. Le client établit une connexion chiffrée avec l'équilibreur de charge, qui à son tour utilise des protocoles non chiffrés avec le pool de serveurs (par exemple HTTP sur le port 80). Alternativement, il est possible d'installer un certificat signé unique sur chaque serveur backend en utilisant le même sujet autre nom sur chaque certificat, permettant à chaque serveur du cluster de représenter le même nom de domaine complet (FQDN).
+
+Pourquoi le fait de n'avoir qu'un seul serveur MySQL capable d'accepter les écritures pose-t-il un problème ?
